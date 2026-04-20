@@ -12,6 +12,7 @@ with open("tokenizer.pkl", "rb") as f:
 max_len = model.input_shape[1] + 1
 
 def predict_next_words(text, top_k=5):
+    print(f"Input text: {text}")
     token_list = tokenizer.texts_to_sequences([text])[0]
     token_list = pad_sequences([token_list], maxlen=max_len-1, padding='pre')
 
@@ -28,6 +29,3 @@ def predict_next_words(text, top_k=5):
 
     return results
 
-
-# Test
-print(predict_next_words("i love", top_k=5))
