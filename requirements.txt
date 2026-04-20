@@ -1,8 +1,7 @@
 fastapi
 uvicorn
-tensorflow
 pydantic
 flask
 flask-cors
-tensorflow
 numpy
+tensorflow-cpu==2.13.0
